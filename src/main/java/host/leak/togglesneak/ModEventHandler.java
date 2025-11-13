@@ -37,9 +37,8 @@ public class ModEventHandler {
         EntityPlayerSP player = Minecraft.getMinecraft().player;
         if ((player != null) && (!(player.movementInput instanceof ModMovementInput))) {
             ModMovementInput mim = new ModMovementInput();
-            ToggleSneak.GUI = new ModGui(mim);
             player.movementInput = mim;
-            MinecraftForge.EVENT_BUS.register(ToggleSneak.GUI);
+            MinecraftForge.EVENT_BUS.register(new ModGui(mim));
         }
     }
 }

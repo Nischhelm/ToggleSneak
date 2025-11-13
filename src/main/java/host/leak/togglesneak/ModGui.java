@@ -37,7 +37,7 @@ public class ModGui extends Gui {
         } else if (ModConfig.statusDisplay == ModConfig.DisplayStyle.TEXT) {
             String onlyTxt = MIM.displayText();
             computeTextPos(onlyTxt);
-            ToggleSneak.GUI.drawString(mc.fontRenderer, onlyTxt, rectX1, rectSnY1, getColorInt(255, 255, 255, 192));
+            drawString(mc.fontRenderer, onlyTxt, rectX1, rectSnY1, getColorInt(255, 255, 255, 192));
         }
     }
 
