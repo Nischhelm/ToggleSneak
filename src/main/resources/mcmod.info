@@ -9,7 +9,7 @@
   "updateUrl": "https://www.curseforge.com/members/muddledguy/togglesneak",
   "authorList": ${mod_author},
   "credits": "Created by Inflated.",
-  "logoFile": "",
+  "logoFile": "icon.png",
   "dependencies": []
 }
 ]
