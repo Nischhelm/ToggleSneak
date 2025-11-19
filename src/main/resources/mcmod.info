@@ -6,9 +6,9 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
-  "updateUrl": "https://www.curseforge.com/members/muddledguy/togglesneak",
+  "updateUrl": "https://www.curseforge.com/members/nischhelm/togglesneaksprint",
   "authorList": ${mod_author},
-  "credits": "Created by Inflated.",
+  "credits": "Created by Inflated, modified and modernised by Nischhelm.",
   "logoFile": "icon.png",
   "dependencies": []
 }
