@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ModGui extends Gui {
     private final Minecraft mc = Minecraft.getMinecraft();
     private final ModMovementInput MIM;
-    private int mcDisplayWidth = -1, mcDisplayHeight = -1;
+    private int mcDisplayWidth = -1, mcDisplayHeight = -1, mcGuiScale = -1;
     private int rectX1, rectX2;
     private int rectSnY1, rectSnY2, rectSpY1, rectSpY2;
     private final String sprintTxt;
@@ -42,7 +42,7 @@ public class ModGui extends Gui {
     }
 
     public void computeDrawPosIfChanged() {
-        if (!ModConfig.configChanged && (mcDisplayWidth == mc.displayWidth) && (mcDisplayHeight == mc.displayHeight)) return;
+        if (!ModConfig.configChanged && (mcDisplayWidth == mc.displayWidth) && (mcDisplayHeight == mc.displayHeight) && (mcGuiScale == mc.gameSettings.guiScale)) return;
         ModConfig.configChanged = false;
 
         ScaledResolution scaledresolution = new ScaledResolution(mc);
@@ -97,6 +97,7 @@ public class ModGui extends Gui {
 
         mcDisplayWidth = mc.displayWidth;
         mcDisplayHeight = mc.displayHeight;
+        mcGuiScale = mc.gameSettings.guiScale;
     }
 
     public void computeTextPos(String displayTxt) {
