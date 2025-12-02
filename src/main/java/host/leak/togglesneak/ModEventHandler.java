@@ -16,6 +16,7 @@ import org.lwjgl.input.Keyboard;
 public class ModEventHandler {
     private static KeyBinding sneakBinding;
     private static KeyBinding sprintBinding;
+    private static final ModMovementInput mim = new ModMovementInput();
 
     public static void initKeybinds() {
         sneakBinding = new KeyBinding("togglesneak.key.toggle.sneak", Keyboard.KEY_G, "togglesneak.key.categories");
@@ -36,7 +37,6 @@ public class ModEventHandler {
     public static void clientTick(TickEvent.ClientTickEvent event) {
         EntityPlayerSP player = Minecraft.getMinecraft().player;
         if ((player != null) && (!(player.movementInput instanceof ModMovementInput))) {
-            ModMovementInput mim = new ModMovementInput();
             player.movementInput = mim;
             MinecraftForge.EVENT_BUS.register(new ModGui(mim));
         }
