@@ -17,6 +17,8 @@ public class ModGui extends Gui {
     private final String sprintTxt;
     private final String sneakTxt;
 
+    public boolean isSubscribed = false;
+
     public ModGui(ModMovementInput mIM) {
         this.MIM = mIM;
         this.sprintTxt = I18n.format("togglesneak.display.label.sprint");
