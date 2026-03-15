@@ -13,10 +13,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 public class ToggleSneak {
     public static final String MODID = "togglesneak";
     public static final String NAME = "Toggle Sneak&Sprint";
-    public static final String VERSION = "1.1.2";
+    public static final String VERSION = "1.1.3";
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        ModEventHandler.initKeybinds();
+        if(ModConfig.enabled) {
+            ModEventHandler.initKeybinds();
+        }
     }
 }

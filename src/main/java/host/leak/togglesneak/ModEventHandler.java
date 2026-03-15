@@ -28,6 +28,7 @@ public class ModEventHandler {
 
     @SubscribeEvent
     public static void onKeyInput(InputEvent.KeyInputEvent event) {
+        if (!ModConfig.enabled) return;
         if ((Minecraft.getMinecraft().currentScreen instanceof GuiChat)) return;
 
         if(sneakBinding.isKeyDown()) ModConfig.toggleSneak = !ModConfig.toggleSneak;
@@ -36,6 +37,7 @@ public class ModEventHandler {
 
     @SubscribeEvent
     public static void clientTick(TickEvent.ClientTickEvent event) {
+        if (!ModConfig.enabled) return;
         EntityPlayerSP player = Minecraft.getMinecraft().player;
         if ((player != null) && (!(player.movementInput instanceof ModMovementInput))) {
             player.movementInput = mim;

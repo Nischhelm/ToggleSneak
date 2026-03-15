@@ -71,6 +71,12 @@ public class ModConfig {
     @Config.RangeInt(min = -500, max = 500)
     public static int vOffset = 0;
 
+    @Config.Comment("Set to false to disable mod entirely")
+    @Config.Name("Mod Enabled")
+    @Config.LangKey("togglesneak.config.enable")
+    @Config.RequiresMcRestart
+    public static boolean enabled = false;
+
     @Mod.EventBusSubscriber(modid = ToggleSneak.MODID)
     private static class EventHandler {
         @SubscribeEvent

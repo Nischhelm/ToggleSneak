@@ -26,3 +26,4 @@ togglesneak.config.panel.voffset=Vertical offset
 togglesneak.config.panel.voffset.tooltip=Vertical offset of onscreen display
 togglesneak.display.label.sneak=Sneak
 togglesneak.display.label.sprint=Sprint
+togglesneak.config.enable=Mod Enabled
