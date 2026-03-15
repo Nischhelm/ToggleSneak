@@ -37,7 +37,7 @@ public class ModEventHandler {
     @SubscribeEvent
     public static void clientTick(TickEvent.ClientTickEvent event) {
         EntityPlayerSP player = Minecraft.getMinecraft().player;
-        if ((player != null) && (!(player.movementInput instanceof ModMovementInput)) && ModConfig.statusDisplay != ModConfig.DisplayStyle.DISABLED) {
+        if ((player != null) && (!(player.movementInput instanceof ModMovementInput))) {
             player.movementInput = mim;
             if(!gui.isSubscribed) {
                 gui.isSubscribed = true;

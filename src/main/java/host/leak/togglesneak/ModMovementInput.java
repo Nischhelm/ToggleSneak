@@ -59,7 +59,7 @@ public class ModMovementInput extends MovementInput {
     }
 
     private void handleSneakToggle() {
-        if (ModConfig.toggleSneak && ModConfig.statusDisplay != ModConfig.DisplayStyle.DISABLED) {
+        if (ModConfig.toggleSneak) {
             if (sneakKeyDown()) {
                 if (sneakWasPressed == 0) {
                     if (sneak) sneakWasPressed = -1;
@@ -80,7 +80,7 @@ public class ModMovementInput extends MovementInput {
     }
 
     private void handleSprintToggle() {
-        if (ModConfig.toggleSprint && ModConfig.statusDisplay != ModConfig.DisplayStyle.DISABLED) {
+        if (ModConfig.toggleSprint) {
             if (sprintKeyDown()) {
                 if (sprintWasPressed == 0) {
                     if (sprint) sprintWasPressed = -1;
