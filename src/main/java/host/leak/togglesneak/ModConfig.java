@@ -43,17 +43,17 @@ public class ModConfig {
     public static int keyHoldTicks = 7;
 
     @Config.Comment("Status display style")
-    @Config.Name("statusDisplay")
+    @Config.Name("Status Display")
     @Config.LangKey("togglesneak.config.panel.display")
     public static DisplayStyle statusDisplay = DisplayStyle.COLOR_CODED;
 
     @Config.Comment("Horizontal position of onscreen display")
-    @Config.Name("displayHPosition")
+    @Config.Name("Display Horiz Position")
     @Config.LangKey("togglesneak.config.panel.hpos")
     public static HPos displayHPos = HPos.LEFT;
 
     @Config.Comment("Vertical position of onscreen display")
-    @Config.Name("displayVPosition")
+    @Config.Name("Display Vert Position")
     @Config.LangKey("togglesneak.config.panel.vpos")
     public static VPos displayVPos = VPos.MIDDLE;
 
